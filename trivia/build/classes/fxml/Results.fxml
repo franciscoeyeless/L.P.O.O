@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+
+<AnchorPane fx:id="mainPane" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trivia.client.controller.ResultsController">
+   <children>
+      <BorderPane layoutX="100.0" layoutY="-60.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <StackPane>
+               <children>
+                  <Label alignment="CENTER" maxWidth="320.0" styleClass="boxLabel" text="%results.results" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="80.0" />
+               </padding>
+            </StackPane>
+         </top>
+         <bottom>
+            <GridPane prefWidth="640.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#restart" text="%results.restart">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#exit" text="%exit">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </GridPane>
+         </bottom>
+         <center>
+            <GridPane maxWidth="-Infinity" prefWidth="320.0" styleClass="boxLabel" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="23.0" prefWidth="138.0" text="%results.score">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="scoreLbl" alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="106.0" text="7/10" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="138.0" text="%results.time" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeLbl" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="104.0" text="120.25/120 s" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="45.0" right="45.0" top="30.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="15.0" left="60.0" right="60.0" top="15.0" />
+               </BorderPane.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/style.css" />
+      <URL value="@../css/bootstrap3.css" />
+   </stylesheets>
+</AnchorPane>
